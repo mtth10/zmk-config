@@ -31,6 +31,8 @@
                 <&kp C_MUTE>,
                 <&kp C_VOL_UP>,
                 <&kp C_VOLUME_DOWN>;
+
+            tapping-term-ms = <300>;
         };
 
         holdtap: holdtap {
@@ -39,9 +41,10 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             hold-trigger-key-positions = <10 11 12 13 16 17 18 19>;
             flavor = "tap-preferred";
+            quick-tap-ms = <150>;
         };
 
         qtabesccaps: qtabesccaps {
@@ -49,6 +52,8 @@
             label = "QTABESCCAPS";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp TAB>, <&kp ESCAPE>, <&kp CAPS>;
+
+            tapping-term-ms = <300>;
         };
     };
 
@@ -77,10 +82,10 @@
 
         layer_2 {
             bindings = <
-&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none  &kp F1  &kp F2   &kp F3   &kp F4
-&out OUT_TOG   &kp K_PREV     &kp C_PLAY     &kp C_NEXT     &trans           &none  &kp F5  &kp F6   &kp F7   &kp F8
-&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none  &kp F9  &kp F10  &kp F11  &kp F12
-                                             &trans         &none            &none
+&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &none  &kp F1  &kp F2   &kp F3   &kp F4
+&out OUT_TOG   &kp C_PREVIOUS  &kp C_PLAY     &kp C_NEXT     &trans           &none  &kp F5  &kp F6   &kp F7   &kp F8
+&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &none  &kp F9  &kp F10  &kp F11  &kp F12
+                                              &trans         &none            &none
             >;
         };
     };
