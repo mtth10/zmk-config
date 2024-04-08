@@ -56,6 +56,11 @@
         };
     };
 
+    &soft_off {
+        hold-time-ms = <2000>; 
+    };
+
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -75,7 +80,7 @@
 &kp GRAVE  &kp LBKT        &kp RBKT        &kp BSLH   &kp APOS    &kp INS        &kp NUMBER_7  &kp NUMBER_8  &kp N9        &none
 &kp LSHFT  &kp MINUS       &kp UP_ARROW    &kp EQUAL  &kp DEL     &kp PAGE_UP    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
 &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END     &kp PAGE_DOWN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
-                                           &trans     &none       &kp N0         &trans
+                                           &trans     &soft_off       &kp N0         &trans
             >;
         };
 
