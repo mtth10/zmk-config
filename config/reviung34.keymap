@@ -41,10 +41,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
             hold-trigger-key-positions = <10 11 12 13 16 17 18 19>;
             flavor = "tap-preferred";
-            quick-tap-ms = <150>;
         };
 
         qtabesccaps: qtabesccaps {
