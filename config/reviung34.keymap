@@ -53,8 +53,6 @@
             label = "LAYERS";
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&mo 1>, <&mo 2>;
-
-            tapping-term-ms = <150>;
         };
     };
 
