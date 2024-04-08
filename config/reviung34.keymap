@@ -22,13 +22,6 @@
 
 / {
     behaviors {
-        media: media {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MEDIA";
-            #binding-cells = <0>;
-            bindings = <&kp C_MUTE>, <&kp C_VOL_UP>, <&kp C_VOLUME_DOWN>;
-        };
-
         holdtap: holdtap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDTAP";
@@ -56,10 +49,7 @@
         };
     };
 
-    &soft_off {
-        hold-time-ms = <2000>; 
-    };
-
+    &soft_off { hold-time-ms = <2000>; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -80,16 +70,16 @@
 &kp GRAVE  &kp LBKT        &kp RBKT        &kp BSLH   &kp APOS    &kp INS        &kp NUMBER_7  &kp NUMBER_8  &kp N9        &none
 &kp LSHFT  &kp MINUS       &kp UP_ARROW    &kp EQUAL  &kp DEL     &kp PAGE_UP    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
 &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END     &kp PAGE_DOWN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
-                                           &trans     &soft_off       &kp N0         &trans
+                                           &trans     &none       &kp N0         &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4     &none  &kp F1  &kp F2   &kp F3   &kp F4
-&out OUT_TOG   &kp C_PREVIOUS  &kp C_PLAY     &kp C_NEXT     &bt BT_CLR_ALL    &none  &kp F5  &kp F6   &kp F7   &kp F8
-&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4      &none  &kp F9  &kp F10  &kp F11  &kp F12
-                                              &trans         &media            &none
+&bt BT_DISC 0  &bt BT_DISC 1   &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4     &kp C_VOLUME_UP    &kp F1  &kp F2   &kp F3   &kp F4
+&out OUT_TOG   &kp C_PREVIOUS  &kp C_PLAY     &kp C_NEXT     &bt BT_CLR_ALL    &kp C_MUTE         &kp F5  &kp F6   &kp F7   &kp F8
+&bt BT_SEL 0   &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4      &kp C_VOLUME_DOWN  &kp F9  &kp F10  &kp F11  &kp F12
+                                              &trans         &none             &none
             >;
         };
     };
