@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -38,17 +39,17 @@
         base {
             display-name = "Base";
             bindings = <
-&kp Q  &kp W  &kp E  &kp R        &kp T        &kp Y          &kp U  &kp I  &kp O  &kp P
-&kp A  &kp S  &kp D  &kp F        &kp G        &kp H          &kp J  &kp K  &kp L  &kp SEMI
-&kp Z  &kp X  &kp C  &kp V        &kp COMMA    &kp PERIOD     &kp B  &kp N  &kp M  &kp SLASH
-                     &lt 1 ENTER  &kp SPACE    &kp BACKSPACE  &mo 0
+&kp Q      &kp W      &kp E      &kp R        &kp T        &kp Y          &kp U      &kp I      &kp O      &kp P
+&kp LG(A)  &kp LA(S)  &kp LS(D)  &kp LC(F)    &kp G        &kp H          &kp RC(J)  &kp RS(K)  &kp RA(L)  &kp RS(SEMI)
+&kp Z      &kp X      &kp C      &kp V        &kp COMMA    &kp PERIOD     &kp B      &kp N      &kp M      &kp SLASH
+                                 &lt 1 ENTER  &kp SPACE    &kp BACKSPACE  &mo 0
             >;
         };
 
         lower {
             display-name = "Lower";
             bindings = <
-&kp GRAVE  &kp LBKT        &kp RBKT        &kp BSLH   &kp APOS    &kp N7  &kp N8  &kp N9  &trans      &trans
+&kp GRAVE  &kp LBKT        &kp RBKT        &kp BSLH   &kp APOS    &kp N7  &kp N8  &kp N9  &bt BT_PRV  &bt BT_NXT
 &kp LSHFT  &kp MINUS       &kp UP_ARROW    &kp EQUAL  &mo 2       &kp N4  &kp N5  &kp N6  &kp INS     &kp PG_UP
 &kp HOME   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END     &kp N1  &kp N2  &kp N3  &kp DELETE  &kp PAGE_DOWN
                                            &trans     &media      &kp N0  &trans
@@ -57,10 +58,10 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4
-&trans  &trans  &trans  &trans  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8
-&trans  &trans  &trans  &trans  &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12
-                        &trans  &trans    &trans
+&bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &trans  &kp F1  &kp F2   &kp F3   &kp F4
+&trans         &trans         &trans         &trans         &trans           &trans  &kp F5  &kp F6   &kp F7   &kp F8
+&bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &trans  &kp F9  &kp F10  &kp F11  &kp F12
+                                             &trans         &trans           &trans
             >;
         };
     };
